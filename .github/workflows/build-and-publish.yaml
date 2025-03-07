@@ -35,7 +35,8 @@ jobs:
         with:
           registry: ${{ env.REGISTRY }}
           username: ${{ github.actor }}
-          password: ${{ secrets.GHCR_PAT }}  # Updated to use GHCR_PAT secret
+          password: ${{ secrets.GITHUB_TOKEN }}
+
 
       - name: Determine image tag
         id: determine-tag
